@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
-gcc -Wall -Wextra -O2 -o main main.c
+gcc -std=c11 -Wall -Wextra -O2 -o main main.c math_utils.c
 ./main
