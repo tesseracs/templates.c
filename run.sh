@@ -1,4 +1,5 @@
 #!/bin/sh
 set -e
-gcc -std=c11 -Wall -Wextra -O2 -o main main.c math_utils.c
-./main
+mkdir -p build
+gcc -std=c11 -Wall -Wextra -Wpedantic -O2 -Iinclude src/main.c src/check.c src/report.c -o build/main
+./build/main
